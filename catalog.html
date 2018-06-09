@@ -26,13 +26,63 @@
     <main class="main-content">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр</h2>
-        <b>Стоимость</b>
-        <!--Здесь будет форма стоимости-->
-        <b>Сетка</b>
-        <!--Здесь будет форма сетки-->
-        <b>Особенности:</b>
-        <!--Здесь будет форма особенности-->
-        <a class="button">Показать</a>
+        <form class="filter-group" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Стоимость</legend>
+            <div class="range-div">
+              <input type="range" min="1" max="15000" value="1" class="input-range-item" id="range-input-id">
+            </div>
+            <div class="text-div">
+              <p class="text-item">
+                <label for="text-id">От</label>
+                <input type="text" name="text" id="text-id" value="0">
+                <label for="text2-id">До</label>
+                <input type="text" name="text2" id="text2-id" value="15000">
+              </p>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка</legend>
+            <ul>
+              <li class="filter-radio">
+                <input type="radio" name="filter-group" id="adaptive-id" checked>
+                <label for="adaptive-id">Адаптивная</label>
+              </li>
+              <li class="filter-radio">
+                <input type="radio" name="filter-group" id="fixed-id">
+                <label for="fixed-id">Фиксированная</label>
+              </li>
+              <li class="filter-radio">
+                <input type="radio" name="filter-group" id="rubber-id">
+                <label for="rubber-id">Резиновая</label>
+              </li>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности</legend>
+            <ul>
+              <li class="filter-checkbox">
+                <input type="checkbox" class="filter-input filter-input-checkbox" name="slider" id="slider-id" checked>
+                <label for="slider-id">Слайдер</label>
+              </li>
+              <li class="filter-checkbox">
+                <input type="checkbox" class="filter-input filter-input-checkbox" name="advantage-block" id="advantage-block-id">
+                <label for="advantage-block-id">Блок преимуществ</label>
+              </li>
+              <li class="filter-checkbox">
+                <input type="checkbox" class="filter-input filter-input-checkbox" name="tidings" id="tidings-id">
+                <label for="tidings-id">Новости</label>
+              </li>
+              <li class="filter-checkbox">
+                <input type="checkbox" class="filter-input filter-input-checkbox" name="gallery" id="gallery-id">
+                <label for="gallery-id">Галлерея</label>
+              </li>
+              <li class="filter-checkbox">
+                <input type="checkbox" class="filter-input filter-input-checkbox" name="chip-basket" id="chip-basket-id">
+                <label for="chip-basket-id">Корзина</label>
+              </li>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="sort">
@@ -40,17 +90,17 @@
         <b>Сортировать:</b>
         <ul class="sort-by-class">
           <li class="sort-item item-1">
-            <a>По цене</a>
+            <button type="button">По цене</button>
           </li>
           <li class="sort-item item-2">
-            <a>По типу</a>
+            <button type="button">По типу</button>
           </li>
           <li class="sort-item item-3">
-            <a>По названию</a>
+            <button type="button">По названию</button>
           </li>
         </ul>
-        <span class="arrow-down">↓</span>
-        <span class="arrow-up">↑</span>
+        <button type="button-arrow" class="arrow-down">↓</button>
+        <button type="button-arrow" class="arrow-up">↑</button>
       </section>
 
       <section class="templates">
@@ -70,7 +120,7 @@
               <h3>Sedona</h3>
               <p>Информационный сайт для туристов</p>
               <p class="price-item">
-                <a class="button"><b>9900 Руб.</b></a>
+                <button type="button" class="button-price"><b>9900 Руб.</b></button>
               </p>
             </div>
           </li>
@@ -88,7 +138,7 @@
               <h3>Pink App</h3>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
               <p class="price-item">
-                <a class="button"><b>9900 Руб.</b></a>
+                <button class="button" type="button-price"><b>9900 Руб.</b></button>
               </p>
             </div>
           </li>
@@ -106,7 +156,7 @@
               <h3>Barbershop</h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
               <p class="price-item">
-                <a class="button"><b>9900 Руб.</b></a>
+                <button class="button" type="button-price"><b>9900 Руб.</b></button>
               </p>
             </div>
           </li>
@@ -124,7 +174,7 @@
               <h3>Mishka</h3>
               <p>Интернет-магазин вязаных игрушек</p>
               <p class="price-item">
-                <a class="button"><b>9900 Руб.</b></a>
+                <button class="button" type="button-price"><b>9900 Руб.</b></button>
               </p>
             </div>
           </li>
@@ -142,7 +192,7 @@
               <h3>A Plus</h3>
               <p>Лендинг курсов повышения квалификации</p>
               <p class="price-item">
-                <a class="button"><b>9900 Руб.</b></a>
+                <button class="button" type="button-price"><b>9900 Руб.</b></button>
               </p>
             </div>
           </li>
@@ -160,7 +210,7 @@
               <h3>Кваст</h3>
               <p>Промо-сайт производителя крафтового кваса</p>
               <p class="price-item">
-                <a class="button"><b>9900 Руб.</b></a>
+                <button class="button" type="button-price"><b>9900 Руб.</b></button>
               </p>
             </div>
           </li>
@@ -191,15 +241,26 @@
             ул. Б. Конюшенная, д. 19/8<br>
             тел. <a class="telephone">+7 (812) 275-75-75</a>
           </p>
-          <a class="button" href="write-us.html">Напишите нам</a>
+          <button type="button" name="button-write-us">Напишите нам</button>
         </div>
       </section>
 
       <section class="modal modal-write-us">
         <h2>Напишите нам</h2>
-        <!--Здесь форма-->
-        <a class="button">Отправить</a>
-        <span class="modal-close">x</span>
+        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="write-us">
+            <label for="login-id">Ваше имя:</label>
+            <input type="text" name="login" id="login-id" placeholder="Имя Фамилия" required>
+            <label for="email-id">Ваш e-mail:</label>
+            <input type="email" name="email" id="email-id" placeholder="email@example.com" required>
+          </p>
+          <p class="write-us">
+            <label for="comment-id">Текст письма:</label>
+            <textarea id="comment-id" name="comment" rows="7" cols="85" placeholder="В свободной форме" required></textarea>
+          </p>
+          <button class="send-off" type="submit">Отправить</button>
+          <button type="button" class="button-close">Закрыть</button>
+        </form>
       </section>
 
       <section class="footer-social-media">
@@ -225,5 +286,3 @@
     </footer>
   </body>
 </html>
-
-<!--Для всех картинок сменю пути и расширения. Пока что хотелось бы проверить разметку. Не уверен в правильности разметки каталога-->

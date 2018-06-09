@@ -46,9 +46,9 @@
       </section>
 
       <div class="slider-indicator">
-        <span class="button button-1 current-button"></span>
-        <span class="button button-2"></span>
-        <span class="button button-3"></span>
+        <input type="radio" name="slide-group" value="slide1" checked class="button slider-indicator-1 current-slider">
+        <input type="radio" name="slide-group" value="slide2" class="button slider-indicator-2">
+        <input type="radio" name="slide-group" value="slide3" class="button slider-indicator-3">
       </div>
     </header>
 
@@ -65,7 +65,7 @@
               Мир никогда не будет прежним<br>
               после того как увидят Ваш сайт!
             </p>
-            <a class="button">Заказать</a>
+            <button type="button" name="order">Заказать</button>
           </li>
 
           <li class="advantages-item item-2">
@@ -74,7 +74,7 @@
               Покорите топ-10 приложений в<br>
               AppStore и Google Play
             </p>
-            <a class="button">Заказать</a>
+            <button type="button" name="order">Заказать</button>
           </li>
 
           <li class="advantages-item item-3">
@@ -83,7 +83,7 @@
               Вы даже не подозреваете,<br>
               насколько вы изумительны!
             </p>
-            <a class="button">Заказать</a>
+            <button type="button" name="order">Заказать</button>
           </li>
         </ul>
       </section>
@@ -146,15 +146,26 @@
             ул. Б. Конюшенная, д. 19/8<br>
             тел. <a class="telephone">+7 (812) 275-75-75</a>
           </p>
-          <a class="button" href="write-us.html">Напишите нам</a>
+          <button type="button" name="button-write-us">Напишите нам</button>
         </div>
       </section>
 
       <section class="modal modal-write-us">
         <h2>Напишите нам</h2>
-        <!--Здесь форма-->
-        <a class="button">Отправить</a>
-        <span class="modal-close">x</span>
+        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="write-us">
+            <label for="login-id">Ваше имя:</label>
+            <input type="text" name="login" id="login-id" placeholder="Имя Фамилия" required>
+            <label for="email-id">Ваш e-mail:</label>
+            <input type="email" name="email" id="email-id" placeholder="email@example.com" required>
+          </p>
+          <p class="write-us">
+            <label for="comment-id">Текст письма:</label>
+            <textarea id="comment-id" name="comment" rows="7" cols="85" placeholder="В свободной форме" required></textarea>
+          </p>
+          <button class="send-off" type="submit">Отправить</button>
+          <button type="button" class="button-close">Закрыть</button>
+        </form>
       </section>
 
       <section class="footer-social-media">
@@ -180,5 +191,3 @@
     </footer>
   </body>
 </html>
-
-<!--Для картинок добавлю правильный путь и расширение позже. Сейчас хотелось бы убедиться, что с самой разметкой все в порядке-->
