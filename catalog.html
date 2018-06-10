@@ -33,12 +33,14 @@
               <input type="range" min="1" max="15000" value="1" class="input-range-item" id="range-input-id">
             </div>
             <div class="text-div">
-              <p class="text-item">
+              <div class="wrapper-from">
                 <label for="text-id">От</label>
                 <input type="text" name="text" id="text-id" value="0">
+              </div>
+              <div class="wrapper-before">
                 <label for="text2-id">До</label>
                 <input type="text" name="text2" id="text2-id" value="15000">
-              </p>
+              </div>
             </div>
           </fieldset>
           <fieldset>
@@ -56,6 +58,7 @@
                 <input type="radio" name="filter-group" id="rubber-id">
                 <label for="rubber-id">Резиновая</label>
               </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Особенности</legend>
@@ -80,6 +83,7 @@
                 <input type="checkbox" class="filter-input filter-input-checkbox" name="chip-basket" id="chip-basket-id">
                 <label for="chip-basket-id">Корзина</label>
               </li>
+            </ul>
           </fieldset>
           <button class="button" type="submit">Показать</button>
         </form>
@@ -90,17 +94,17 @@
         <b>Сортировать:</b>
         <ul class="sort-by-class">
           <li class="sort-item item-1">
-            <button type="button">По цене</button>
+            <a href="#">По цене</a>
           </li>
           <li class="sort-item item-2">
-            <button type="button">По типу</button>
+            <a href="#">По типу</a>
           </li>
           <li class="sort-item item-3">
-            <button type="button">По названию</button>
+            <a href="#">По названию</a>
           </li>
         </ul>
-        <button type="button-arrow" class="arrow-down">↓</button>
-        <button type="button-arrow" class="arrow-up">↑</button>
+        <a href="#" class="arrow-down">↓</a>
+        <a href="#" class="arrow-up">↑</a>
       </section>
 
       <section class="templates">
@@ -120,7 +124,7 @@
               <h3>Sedona</h3>
               <p>Информационный сайт для туристов</p>
               <p class="price-item">
-                <button type="button" class="button-price"><b>9900 Руб.</b></button>
+                <a href="#"><b>9900 Руб.</b></a>
               </p>
             </div>
           </li>
@@ -138,7 +142,7 @@
               <h3>Pink App</h3>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
               <p class="price-item">
-                <button class="button" type="button-price"><b>9900 Руб.</b></button>
+                <a href="#"><b>9900 Руб.</b></a>
               </p>
             </div>
           </li>
@@ -156,7 +160,7 @@
               <h3>Barbershop</h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
               <p class="price-item">
-                <button class="button" type="button-price"><b>9900 Руб.</b></button>
+                <a href="#"><b>9900 Руб.</b></a>
               </p>
             </div>
           </li>
@@ -174,7 +178,7 @@
               <h3>Mishka</h3>
               <p>Интернет-магазин вязаных игрушек</p>
               <p class="price-item">
-                <button class="button" type="button-price"><b>9900 Руб.</b></button>
+                <a href="#"><b>9900 Руб.</b></a>
               </p>
             </div>
           </li>
@@ -192,7 +196,7 @@
               <h3>A Plus</h3>
               <p>Лендинг курсов повышения квалификации</p>
               <p class="price-item">
-                <button class="button" type="button-price"><b>9900 Руб.</b></button>
+                <a href="#"><b>9900 Руб.</b></a>
               </p>
             </div>
           </li>
@@ -210,7 +214,7 @@
               <h3>Кваст</h3>
               <p>Промо-сайт производителя крафтового кваса</p>
               <p class="price-item">
-                <button class="button" type="button-price"><b>9900 Руб.</b></button>
+                <a href="#"><b>9900 Руб.</b></a>
               </p>
             </div>
           </li>
@@ -241,23 +245,31 @@
             ул. Б. Конюшенная, д. 19/8<br>
             тел. <a class="telephone">+7 (812) 275-75-75</a>
           </p>
-          <button type="button" name="button-write-us">Напишите нам</button>
+          <a href="write-us.html">Напишите нам</a>
         </div>
       </section>
 
       <section class="modal modal-write-us">
         <h2>Напишите нам</h2>
         <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="write-us">
-            <label for="login-id">Ваше имя:</label>
-            <input type="text" name="login" id="login-id" placeholder="Имя Фамилия" required>
-            <label for="email-id">Ваш e-mail:</label>
-            <input type="email" name="email" id="email-id" placeholder="email@example.com" required>
-          </p>
-          <p class="write-us">
-            <label for="comment-id">Текст письма:</label>
-            <textarea id="comment-id" name="comment" rows="7" cols="85" placeholder="В свободной форме" required></textarea>
-          </p>
+          <div class="wrapper-login">
+            <p>
+              <label for="login-id">Ваше имя:</label>
+              <input type="text" name="login" id="login-id" placeholder="Имя Фамилия" required>
+            </p>
+          </div>
+          <div class="wrapper-email">
+            <p>
+              <label for="email-id">Ваш e-mail:</label>
+              <input type="email" name="email" id="email-id" placeholder="email@example.com" required>
+            </p>
+          </div>
+          <div class="wrapper-comment">
+            <p>
+              <label for="comment-id">Текст письма:</label>
+              <textarea id="comment-id" name="comment" rows="7" cols="85" placeholder="В свободной форме" required></textarea>
+            </p>
+          </div>
           <button class="send-off" type="submit">Отправить</button>
           <button type="button" class="button-close">Закрыть</button>
         </form>
