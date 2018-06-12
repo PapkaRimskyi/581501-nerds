@@ -45,14 +45,20 @@
         <a class="button" href="learn-to-more.html">Узнать больше</a>
       </section>
 
-      <div class="slider-indicator">
-        <label for="slide1-id" class="visually-hidden">Слайд 1</label>
-        <input type="radio" name="slide-group" value="slide1" id="slide1-id" checked class="button slider-indicator-1 current-slider">
-        <label for="slide2-id" class="visually-hidden">Слайд 2</label>
-        <input type="radio" name="slide-group" value="slide2" id="slide2-id" class="button slider-indicator-2">
-        <label for="slide3-id" class="visually-hidden">Слайд 3</label>
-        <input type="radio" name="slide-group" value="slide3" id="slide3-id" class="button slider-indicator-3">
-      </div>
+      <ul class="slider-indicator">
+        <li>
+          <label for="slide1-id" class="visually-hidden">Слайд 1</label>
+          <input type="radio" name="slide-group" value="slide1" id="slide1-id" checked class="button slider-indicator-1 current-slider">
+        </li>
+        <li>
+          <label for="slide2-id" class="visually-hidden">Слайд 2</label>
+          <input type="radio" name="slide-group" value="slide2" id="slide2-id" class="button slider-indicator-2">
+        </li>
+        <li>
+          <label for="slide3-id" class="visually-hidden">Слайд 3</label>
+          <input type="radio" name="slide-group" value="slide3" id="slide3-id" class="button slider-indicator-3">
+        </li>
+      </ul>
     </header>
 
     <main class="main-content">
@@ -121,20 +127,28 @@
 
       <section class="main-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <figure class="contacts-figure">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/index-img/htmlacademy.png" width="199" height="68" alt="Логотип HTML Academy">
-          </a>
-          <a href="#">
-            <img src="img/index-img/barbershop.png" width="209" height="90" alt="Логотип Barbershop Borodinski">
-          </a>
-          <a href="#">
-            <img src="img/index-img/pink.png" width="185" height="52" alt="Логотип Pink">
-          </a>
-          <a href="#">
-            <img src="img/index-img/mishka.png" width="173" height="84" alt="Логотип Mishka">
-          </a>
-        </figure>
+        <ul class="contacts-list">
+          <li>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/index-img/htmlacademy.png" width="199" height="68" alt="Логотип HTML Academy">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/index-img/barbershop.png" width="209" height="90" alt="Логотип Barbershop Borodinski">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/index-img/pink.png" width="185" height="52" alt="Логотип Pink">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/index-img/mishka.png" width="173" height="84" alt="Логотип Mishka">
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 
@@ -156,13 +170,13 @@
       <section class="modal modal-write-us">
         <h2>Напишите нам</h2>
         <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="wrapper-login">
+          <div class="wrapper-row">
             <p>
               <label for="login-id">Ваше имя:</label>
               <input type="text" name="login" id="login-id" placeholder="Имя Фамилия" required>
             </p>
           </div>
-          <div class="wrapper-email">
+          <div class="wrapper-row">
             <p>
               <label for="email-id">Ваш e-mail:</label>
               <input type="email" name="email" id="email-id" placeholder="email@example.com" required>
