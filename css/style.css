@@ -1,8 +1,3 @@
-.advantages-list .item-1 {
-  background-image: url("img/index-img/illustration-1.jpg");
-  background-size: contain;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -15,12 +10,13 @@ body {
 }
 
 .header-main {
+  margin-bottom: 80px;
   background-color: #eeeeee;
 }
 
-.basket-list {
-  background-image: url("../svg/header-svg/cart-icon.svg");
-  background-repeat: no-repeat;
+.basket::before {
+  content: url("../svg/header-svg/cart-icon.svg");
+  padding-right: 20px;
 }
 
 .navigation-list,
@@ -28,40 +24,52 @@ body {
   list-style-type: none;
 }
 
-.navigation-item a,
-.basket-item a {
+.navigation-item .nav-link,
+.basket-item .nav-link {
   text-decoration: none;
   color: #000000;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 30px;
 }
 
-.navigation-item a:hover,
-.basket-item a:hover {
+.navigation-item .nav-link:hover,
+.basket-item .nav-link:hover {
   color: #fb565a;
 }
 
-.navigation-item a:active,
-.basket-item a:active {
-  color: rgba(0, 0, 0, 0.302);
+.navigation-item .nav-link:active,
+.basket-item .nav-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-item .current-link {
+  border-bottom: 2px solid #fb565a;
+  padding-bottom: 10px;
 }
 
 .h2-description {
   color: #000000;
   font-size: 55px;
+  line-height: 55px;
 }
 
 .p-description {
   font-size: 16px;
   color: #283136;
+  line-height: 24px;
 }
 
 .header-description a {
   padding: 15px 65px;
   color: #ffffff;
-  background-color: #fb565a;
   text-decoration: none;
   text-transform: uppercase;
+  line-height: 18px;
+}
+
+.header-description .button-bg {
+  background-color: #fb565a;
 }
 
 .header-description a:hover {
@@ -69,7 +77,7 @@ body {
 }
 
 .header-description a:active {
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
   box-shadow: inset 0px 3px 2px 0px #c13135;
 }
@@ -90,6 +98,10 @@ header .slider-1,
 header .slider-2,
 header .slider-3 {
   background-repeat: no-repeat;
+}
+
+.section-wrapper .hidden {
+  display: none;
 }
 
 .slider-indicator li {
@@ -115,6 +127,7 @@ main h1.visually-hidden {
 
 .advantages-item h3 {
   font-size: 24px;
+  line-height: 30px;
   font-weight: bold;
   color: #000000;
   text-transform: uppercase;
@@ -147,9 +160,12 @@ main h1.visually-hidden {
 .advantages-item a {
   padding: 15px 40px;
   color: #ffffff;
-  background-color: #fb565a;
   text-decoration: none;
+  background-color: #fb565a;
   text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .advantages-item:first-of-type a:hover {
@@ -157,7 +173,7 @@ main h1.visually-hidden {
 }
 
 .advantages-item:first-of-type a:active {
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
   box-shadow: inset 0px 3px 2px 0px #c13135;
 }
@@ -171,7 +187,7 @@ main h1.visually-hidden {
 }
 
 .advantages-item:nth-of-type(2) a:active {
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #00aa62;
   box-shadow: inset 0px 3px 2px 0px #009958;
 }
@@ -185,7 +201,7 @@ main h1.visually-hidden {
 }
 
 .advantages-item:last-of-type a:active {
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #e5a722;
   box-shadow: inset 0px 3px 2px 0px #ce961f;
 }
@@ -194,7 +210,7 @@ main h1.visually-hidden {
   color: #000000;
   font-size: 45px;
   line-height: 45px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .main-about-us p {
@@ -210,7 +226,7 @@ main h1.visually-hidden {
   text-transform: uppercase;
 }
 
-.main-about-us .order-criteria {
+.order-criteria {
   color: #283136;
   font-size: 16px;
   line-height: 24px;
@@ -231,11 +247,13 @@ table .percentages {
   color: #000000;
   font-size: 45px;
   font-weight: bold;
+  line-height: 10px;
 }
 
 table .descrpt-row {
   color: #283136;
   font-size: 16px;
+  line-height: 18px;
 }
 
 .main-contacts .visually-hidden {
@@ -263,6 +281,7 @@ table .descrpt-row {
   font-weight: bold;
   font-size: 18px;
   text-transform: uppercase;
+  line-height: 30px;
 }
 
 .address p {
@@ -278,6 +297,7 @@ table .descrpt-row {
   color: #ffffff;
   background-color: #fb565a;
   font-size: 16px;
+  line-height: 18px;
   font-weight: 500;
 }
 
@@ -286,7 +306,7 @@ table .descrpt-row {
 }
 
 .address .write-us:active {
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
   box-shadow: inset 0px 3px 2px 0px #c13135;
 }
@@ -294,18 +314,21 @@ table .descrpt-row {
 .modal-write-us h2 {
   color: #000000;
   font-size: 45px;
-  font-weight: 600;
+  line-height: 45px;
+  font-weight: 500;
 }
 
 .wrapper-row label {
   color: #000000;
   font-size: 16px;
+  line-height: 18px;
   font-weight: bold;
 }
 
 .wrapper-row input {
   border: 2px solid #d7dcde;
   border-radius: 2px;
+  outline: none;
 }
 
 .wrapper-row input:hover {
@@ -324,6 +347,7 @@ table .descrpt-row {
 .wrapper-row textarea {
   border: 2px solid #d7dcde;
   border-radius: 2px;
+  outline: none;
 }
 
 .wrapper-row textarea:hover {
@@ -344,6 +368,7 @@ table .descrpt-row {
   color: #ffffff;
   background-color: #fb565a;
   font-size: 16px;
+  line-height: 18px;
   font-weight: 500;
   border: 1px solid #fb565a;
   border-radius: 1px;
@@ -354,8 +379,8 @@ table .descrpt-row {
   background-color: #e74246;
 }
 
-.modal-write-us .send-off:hover {
-  color: rgba(255, 255, 255, 0.302);
+.modal-write-us .send-off:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
   box-shadow: inset 0px 3px 2px 0px #c13135;
 }
@@ -376,6 +401,10 @@ table .descrpt-row {
   opacity: 0.1;
 }
 
+.write-us-form .hidden {
+  display: none;
+}
+
 .footer-social-media h2 {
   display: none;
 }
@@ -387,31 +416,52 @@ table .descrpt-row {
 
 .social-item li {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+}
+
+.social-item .button {
+  display: inline-block;
+  width: 79px;
+  height: 79px;
   background-color: #e1e1e1;
   border-radius: 50%;
+}
+
+.social-item .button:hover {
+  background-color: #e74246;
+}
+
+.social-item .button:active {
+  box-shadow: inset 0px 3px 2px 0px #c13135;
+  background-color: #d7373b;
 }
 
 .social-item .button-vk  {
   background-image: url("../svg/footer-svg/vk-icon.svg");
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .social-item .button-facebook {
   background-image: url("../svg/footer-svg/fb-icon.svg");
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .social-item .button-instagram {
   background-image: url("../svg/footer-svg/insta-icon.svg");
   background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .be-friend b {
   color: #000000;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 700;
 }
 
 .be-friend p {
@@ -435,7 +485,7 @@ table .descrpt-row {
   color: #000000;
   font-size: 55px;
   line-height: 55px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .catalog-page .logo:hover {
@@ -515,26 +565,28 @@ table .descrpt-row {
   opacity: 1;
 }
 
-.filter-group button {
+.filter-group .button {
   color: #000000;
-  padding: 15px 65px;
-  background-color: #eeeeee;
+  padding: 0px 65px;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 600;
+  font-weight: 500;
+  background-color: #eeeeee;
   text-transform: uppercase;
   border: 2px solid #eeeeee;
   border-radius: 2px;
 }
 
-.filter-group button:hover {
+.filter-group .button:hover {
   background-color: #dfdfdf;
 }
 
-.filter-group button:active {
+.filter-group .button:active {
   background-color: #d5d5d5;
   box-shadow: inset 0px 3px 2px 0px #bfbfbf;
+  color: rgba(0, 0, 0, 0.3);
 }
+
 
 .sort .visually-hidden {
   display: none;
@@ -629,7 +681,7 @@ table .descrpt-row {
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 15px 65px;
   background-color: #fb565a;
   text-decoration: none;
@@ -667,6 +719,9 @@ table .descrpt-row {
   padding: 18px 21px;
   background-color: #eeeeee;
   border-radius: 2px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .page-current {
