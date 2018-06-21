@@ -686,17 +686,17 @@ table .descrpt-row {
   width: 1160px;
 }
 
+
 .header-nav {
   display: flex;
   margin: 0px auto;
-  padding-top: 50px;
+  padding-top: 47px;
 
 }
 
 .header-logo {
-  display: flex;
   width: 160px;
-  justify-content: space-between;
+  padding-top: 3px;
 }
 
 .navigation-list {
@@ -760,15 +760,11 @@ table .descrpt-row {
 }
 
 .main-about-us {
-  display: flex;
-  flex-direction: column;
   width: 660px;
 }
 
 .main-statistics {
-  display: flex;
   width: 360px;
-  flex-direction: column;
 }
 
 .main-contacts {
@@ -784,6 +780,7 @@ table .descrpt-row {
   display: flex;
   margin: 0 auto;
   align-items: center;
+  padding-left: 30px;
 }
 
 .contacts-list li {
@@ -803,7 +800,6 @@ table .descrpt-row {
   width: 260px;
   display: flex;
   justify-content: space-between;
-  margin: 0px;
   padding: 0px;
 }
 
@@ -812,7 +808,7 @@ table .descrpt-row {
 }
 
 .catalog-page .header-main {
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 .header-h1 {
@@ -857,12 +853,14 @@ table .descrpt-row {
   display: flex;
   justify-content: space-between;
   margin: 0;
+
 }
 
-.arrow-wrapper {
+.sort-by-arrow {
   display: flex;
-  width: 60px;
-  justify-content: center;
+  width: 44px;
+  margin: 0;
+  justify-content: space-around;
 }
 
 .browser {
