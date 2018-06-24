@@ -125,22 +125,22 @@
       <section class="main-contacts container">
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="contacts-list">
-          <li>
+          <li class="contact-item">
             <a name="customers" href="https://htmlacademy.ru/intensive/htmlcss">
               <img src="img/index-img/htmlacademy.png" width="199" height="68" alt="Логотип HTML Academy">
             </a>
           </li>
-          <li>
+          <li class="contact-item">
             <a href="#">
               <img src="img/index-img/barbershop.png" width="209" height="90" alt="Логотип Barbershop Borodinski">
             </a>
           </li>
-          <li>
+          <li class="contact-item">
             <a href="#">
               <img src="img/index-img/pink.png" width="185" height="52" alt="Логотип Pink">
             </a>
           </li>
-          <li>
+          <li class="contact-item">
             <a href="#">
               <img src="img/index-img/mishka.png" width="173" height="84" alt="Логотип Mishka">
             </a>
@@ -152,39 +152,42 @@
     <footer class="footer-main">
 
       <section class="main-map">
-        <img src="img/footer-img/map.jpg" alt="Карта. Как нас найти?" width="1583" height="416">
-        <div class="address">
-          <h3>Nёrds design studio</h3>
-          <p>
-            191186, Санкт-Петербург<br>
-            ул. Б. Конюшенная, д. 19/8<br>
-          </p>
-          <p>тел. <a name="communications" class="telephone">+7 (812) 275-75-75</a></p>
-          <a class="button button-width" href="write-us.html">Напишите нам</a>
+        <img src="img/footer-img/map.jpg" alt="Карта. Как нас найти?" width="1600" height="416">
+        <div class="address-centerer container">
+          <div class="address">
+            <h3>Nёrds design studio</h3>
+            <p>
+              191186, Санкт-Петербург<br>
+              ул. Б. Конюшенная, д. 19/8<br>
+            </p>
+            <p>тел. <a name="communications" class="telephone">+7 (812) 275-75-75</a></p>
+            <a class="button button-width" href="write-us.html">Напишите нам</a>
+          </div>
+          <section class="modal modal-write-us">
+            <h2>Напишите нам</h2>
+            <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="wrapper-row">
+                <p>
+                  <label for="login-id">Ваше имя:</label><br>
+                  <input type="text" name="login" id="login-id" pattern="^[А-Яа-яЁё\s]+$" placeholder="Имя Фамилия">
+                </p>
+                <p>
+                  <label for="email-id">Ваш e-mail:</label><br>
+                  <input type="email" name="email" id="email-id" placeholder="email@example.com">
+                </p>
+              </div>
+              <div class="wrapper-row">
+                <p>
+                  <label for="comment-id">Текст письма:</label>
+                  <textarea id="comment-id" name="comment" rows="5" cols="85" placeholder="В свободной форме"></textarea>
+                </p>
+              </div>
+              <button class="button send-off" type="submit">Отправить</button>
+              <button class="button-close" type="button">Закрыть</button>
+            </form>
+          </section>
         </div>
-        <section class="modal modal-write-us">
-          <h2>Напишите нам</h2>
-          <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="wrapper-row">
-              <p>
-                <label for="login-id">Ваше имя:</label><br>
-                <input type="text" name="login" id="login-id" pattern="^[А-Яа-яЁё\s]+$" placeholder="Имя Фамилия">
-              </p>
-              <p>
-                <label for="email-id">Ваш e-mail:</label><br>
-                <input type="email" name="email" id="email-id" placeholder="email@example.com">
-              </p>
-            </div>
-            <div class="wrapper-row">
-              <p>
-                <label for="comment-id">Текст письма:</label>
-                <textarea id="comment-id" name="comment" rows="5" cols="85" placeholder="В свободной форме"></textarea>
-              </p>
-            </div>
-            <button class="button send-off" type="submit">Отправить</button>
-            <button class="button-close" type="button">Закрыть</button>
-          </form>
-        </section>
+
       </section>
 
       <section class="footer-social-media container">
