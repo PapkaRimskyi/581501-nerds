@@ -120,20 +120,36 @@
         <section class="sort">
           <h2 class="visually-hidden">Сортировка товара</h2>
           <b>Сортировать:</b>
-          <ul class="sort-by-class">
-            <li class="sort-item item-1">
-              <a href="#">По цене</a>
-            </li>
-            <li class="sort-item item-2">
-              <a href="#">По типу</a>
-            </li>
-            <li class="sort-item item-3">
-              <a href="#">По названию</a>
-            </li>
-          </ul>
-          <div class="sort-by-arrow">
-            <a href="#" class="arrow-down">↓</a>
-            <a href="#" class="arrow-up">↑</a>
+          <div class="sort-container">
+            <ul class="sort-by-class">
+              <li class="sort-item">
+                <a href="#">По цене</a>
+              </li>
+              <li class="sort-item">
+                <a href="#">По типу</a>
+              </li>
+              <li class="sort-item">
+                <a href="#">По названию</a>
+              </li>
+            </ul>
+            <ul class="sort-by-arrow">
+              <li>
+                <a href="#" class="arrow-down">
+                  <span class="visually-hidden">↓</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="arrow-up">
+                  <span class="visually-hidden">↑</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -142,7 +158,7 @@
           <ul class="project-screen">
 
             <li class="project-item">
-              <div class="browser browser-hover">
+              <div class="browser">
                 <ul class="dot-list">
                   <li></li>
                   <li></li>
@@ -152,9 +168,9 @@
               <img src="img/catalog-img/img-sedona.png" alt="Sedona" width="360" height="576">
               <div class="description-hover">
                 <h3>Sedona</h3>
-                <p>Информационный сайт для туристов</p>
+                <p class="description-info">Информационный сайт<br> для туристов</p>
                 <p class="price-item">
-                  <a href="#">9900 Руб.</a>
+                  <a class="button button-bg" href="#">9 900 Руб.</a>
                 </p>
               </div>
             </li>
@@ -170,9 +186,9 @@
               <img src="img/catalog-img/img-pink.png" alt="Pink-App" width="360" height="576">
               <div class="description-hover">
                 <h3>Pink App</h3>
-                <p>Продуктовый лендинг приложения для iOS и Android</p>
+                <p class="description-info">Продуктовый лендинг приложения для iOS и Android</p>
                 <p class="price-item">
-                  <a href="#">9900 Руб.</a>
+                  <a class="button button-bg" href="#">9 900 Руб.</a>
                 </p>
               </div>
             </li>
@@ -188,9 +204,9 @@
               <img src="img/catalog-img/img-barbershop.png" alt="Borodinski" width="360" height="576">
               <div class="description-hover">
                 <h3>Barbershop</h3>
-                <p>Сайт салона красоты. Для мужчин, да.</p>
+                <p class="description-info">Сайт салона красоты.<br> Для мужчин, да.</p>
                 <p class="price-item">
-                  <a href="#">9900 Руб.</a>
+                  <a class="button button-bg" href="#">9 900 Руб.</a>
                 </p>
               </div>
             </li>
@@ -206,9 +222,9 @@
               <img src="img/catalog-img/img-mishka.png" alt="Mishka" width="360" height="576">
               <div class="description-hover">
                 <h3>Mishka</h3>
-                <p>Интернет-магазин вязаных игрушек</p>
+                <p class="description-info">Интернет-магазин<br> вязаных игрушек</p>
                 <p class="price-item">
-                  <a href="#">>9900 Руб.</a>
+                  <a class="button button-bg" href="#">9 900 Руб.</a>
                 </p>
               </div>
             </li>
@@ -224,9 +240,9 @@
               <img src="img/catalog-img/img-aplus.png" alt="A Plus" width="360" height="576">
               <div class="description-hover">
                 <h3>A Plus</h3>
-                <p>Лендинг курсов повышения квалификации</p>
+                <p class="description-info">Лендинг курсов повышения квалификации</p>
                 <p class="price-item">
-                  <a href="#"><b>9900 Руб.</b></a>
+                  <a class="button button-bg" href="#"><b>9 900 Руб.</b></a>
                 </p>
               </div>
             </li>
@@ -242,9 +258,9 @@
               <img src="img/catalog-img/img-kvast.png" alt="Кваст" width="360" height="576">
               <div class="description-hover">
                 <h3>Кваст</h3>
-                <p>Промо-сайт производителя крафтового кваса</p>
+                <p class="description-info">Промо-сайт производителя крафтового кваса</p>
                 <p class="price-item">
-                  <a href="#">9900 Руб.</a>
+                  <a class="button button-bg" href="#">9 900 Руб.</a>
                 </p>
               </div>
             </li>
@@ -268,7 +284,7 @@
     <footer class="footer-main">
 
       <section class="main-map">
-        <img src="img/footer-img/map.jpg" alt="Карта. Как нас найти?" width="1600" height="416">
+        <img src="img/footer-img/map.jpg" alt="Карта. Как нас найти?" width="1600" height="462">
         <div class="address-centerer container">
           <div class="address">
             <h3>Nёrds design studio</h3>
