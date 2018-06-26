@@ -356,8 +356,8 @@ a {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 18px;
+  margin-top: 23px;
 }
 
 .main-about-us h3 {
@@ -531,7 +531,7 @@ td {
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .address {
@@ -550,7 +550,7 @@ td {
   text-transform: uppercase;
   margin-bottom: 25px;
   padding-right: 50px;
-  padding-left: 55px;
+  padding-left: 50px;
   text-align: left;
 }
 
@@ -559,7 +559,7 @@ td {
   line-height: 18px;
   margin-bottom: 15px;
   padding-right: 50px;
-  padding-left: 55px;
+  padding-left: 50px;
   text-align: left;
   word-wrap: break-word;
 }
@@ -572,7 +572,7 @@ td {
 .address .button-width {
   width: 219px;
   margin-right: 40px;
-  margin-left: 55px;
+  margin-left: 50px;
   padding: 15px 0px;
 }
 
@@ -590,6 +590,10 @@ td {
   padding: 70px 100px 84px 100px;
   border: 1px solid transparent;
   box-shadow: 2px 2px 70px 10px #595a5a;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal-write-us h2 {
@@ -659,7 +663,6 @@ td {
   border-color: #e74246;
   color: #e74246;
 }
-
 
 .button-close {
   position: absolute;
@@ -904,7 +907,7 @@ td {
   width: 60px;
   font-family: "Roboto", sans-serif;
   padding: 8px 10px;
-  margin-left: 10px;
+  margin-left: 6px;
   font-size: 16px;
   text-align: center;
   color: #283136;
@@ -946,10 +949,10 @@ td {
   position: absolute;
   left: 0px;
   top: -2px;
-  width : 18px;
-  height: 18px;
+  width : 17px;
+  height: 17px;
   border-radius: 50%;
-  border: 3px solid #4d4d4d;
+  border: 4px solid #4d4d4d;
   opacity: 0.4;
 }
 
@@ -963,10 +966,23 @@ td {
   content: "";
   top: 4px;
   left: 4px;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: #4d4d4d;
+}
+.radio-container input[type="radio"]:disabled + .radio-indicator,
+.radio-container input[type="radio"]:checked:disabled + .radio-indicator,
+.radio-container input[type="radio"]:disabled + .radio-indicator::before,
+.radio-container input[type="radio"]:checked:disabled + .radio-indicator::before,
+.radio-container input[type="radio"]:disabled + .radio-indicator::after,
+.radio-container input[type="radio"]:checked:disabled + .radio-indicator::after {
+  opacity: 0.1;
+}
+
+.radio-container input[type="radio"]:disabled ~ .name-network,
+.radio-container input[type="radio"]:checked:disabled ~ .name-network {
+  opacity: 0.3;
 }
 
 .checkbox-list {
@@ -998,10 +1014,10 @@ td {
   position: absolute;
   top: -3px;
   left: -1px;
-  width: 21px;
-  height: 21px;
-  border: 2px solid #283136;
-  border-radius: 3px;
+  width: 26px;
+  height: 24px;
+  background-image: url("../svg/catalog-svg/checkbox-off.svg");
+  background-repeat: no-repeat;
   opacity: 0.4;
 }
 
@@ -1009,42 +1025,24 @@ td {
   opacity: 1;
 }
 
-.checkbox-container input[type="checkbox"] + .checkbox-indicator::before  {
+.checkbox-container input[type="checkbox"]:checked + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 5px;
-  left: 6px;
-  width: 5px;
-  height: 12px;
-  background-color: #4d4d4d;
-  opacity: 0.4;
+  top: -3px;
+  left: -1px;
+  width: 26px;
+  height: 24px;
+  background-image: url("../svg/catalog-svg/checkbox-on.svg");
+  background-repeat: no-repeat;
 }
 
-.checkbox-container input[type="checkbox"] + .checkbox-indicator::after {
-  position: absolute;
-  content: "";
-  top: 4px;
-  left: 10px;
-  width: 16px;
-  height: 5px;
-  background-color: #4d4d4d;
-  opacity: 0.4;
+.checkbox-container input[type="checkbox"]:disabled + .checkbox-indicator,
+.checkbox-container input[type="checkbox"]:checked:disabled + .checkbox-indicator {
+  opacity: 0.1;
 }
 
-.checkbox-container input[type="checkbox"] + .checkbox-indicator::before,
-.checkbox-container input[type="checkbox"] + .checkbox-indicator::after {
-  transform: rotate(135deg);
-}
-
-.checkbox-indicator::before,
-.checkbox-indicator::after {
-  display: none;
-}
-
-.checkbox-container input[type="checkbox"]:checked + .checkbox-indicator::before,
-.checkbox-container input[type="checkbox"]:checked + .checkbox-indicator::after {
-  display: block;
-  opacity: 1;
+.checkbox-container input[type="checkbox"]:disabled ~ .name-hand,
+.checkbox-container input[type="checkbox"]:checked:disabled ~ .name-hand {
+  opacity: 0.3;
 }
 
 .button-show {
@@ -1107,6 +1105,7 @@ td {
 
 .sort-item a {
   opacity: 0.3;
+  color: #000000;
 }
 
 .sort-item a:hover {
@@ -1114,7 +1113,6 @@ td {
 }
 
 .sort-item a:active {
-  color: #000000;
   opacity: 1;
 }
 
@@ -1165,6 +1163,7 @@ td {
 .project-item img {
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
+  border-top: none;
 }
 
 .browser {
@@ -1174,11 +1173,11 @@ td {
   width: 360px;
   height: 39px;
   border: 1px solid #4d4d4d;
-  box-sizing: border-box;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   background-color: #4d4d4d;
   opacity: 0.1;
+  box-sizing: border-box;
 }
 
 .dot-list {
@@ -1258,7 +1257,11 @@ td {
   color: #ffffff;
 }
 
-.project-item img:hover ~ .description-hover {
+.project-item:hover .browser {
+  opacity: 1;
+}
+
+.project-item:hover .description-hover {
   display: block;
 }
 

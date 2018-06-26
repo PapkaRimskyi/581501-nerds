@@ -161,9 +161,9 @@
               ул. Б. Конюшенная, д. 19/8<br>
             </p>
             <p>тел. <a name="communications" class="telephone">+7 (812) 275-75-75</a></p>
-            <a class="button button-width" href="write-us.html">Напишите нам</a>
+            <a class="button button-width open-popup" href="write-us.html">Напишите нам</a>
           </div>
-          <section class="modal modal-write-us">
+          <section class="modal modal-write-us modal-show">
             <h2>Напишите нам</h2>
             <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="wrapper-row">
@@ -226,5 +226,20 @@
         </div>
       </section>
     </footer>
+    <script>
+      var button_open = document.querySelector(".open-popup");
+      var popup = document.querySelector(".modal-write-us");
+      var button_close = document.querySelector(".button-close");
+
+      button_open.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      });
+
+      button_close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+      });
+    </script>
   </body>
 </html>
