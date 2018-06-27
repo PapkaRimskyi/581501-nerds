@@ -254,7 +254,7 @@ a {
 .main-advantages {
   display: flex;
   margin: 0 auto;
-  margin-bottom: 78px;
+  margin-bottom: 60px;
 }
 
 .advantages-list {
@@ -264,11 +264,13 @@ a {
   padding: 0;
   list-style-type: none;
   margin-bottom: 0;
+  flex-wrap: wrap;
 }
 
 .advantages-item {
   width: 300px;
   padding-top: 150px;
+  margin-bottom: 20px;
 }
 
 .item-1 {
@@ -435,7 +437,7 @@ td {
 .main-contacts {
   position: relative;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 0;
@@ -464,6 +466,7 @@ td {
 .contacts-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   list-style-type: none;
   padding-left: 0;
   margin-top: 0;
@@ -529,7 +532,7 @@ td {
 .address-centerer {
   width: 1160px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 52px;
   padding-bottom: 50px;
   padding-left: 20px;
 }
@@ -582,6 +585,7 @@ td {
   background-color: #ffffff;
   top: 30px;
   left: 257px;
+  z-index: 1000;
 }
 
 .modal-write-us {
@@ -711,7 +715,7 @@ td {
   margin-bottom: 65px;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 51px;
+  margin-top: 55px;
 }
 
 .social-item {
@@ -806,6 +810,7 @@ td {
   margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .catalog-page .filter {
@@ -960,8 +965,7 @@ td {
   opacity: 1;
 }
 
-.radio-container input[type="radio"]:checked + .radio-indicator::before,
-.radio-container input[type="radio"]:checked + .radio-indicator::after {
+.radio-container input[type="radio"]:checked + .radio-indicator::before {
   position: absolute;
   content: "";
   top: 4px;
@@ -974,9 +978,7 @@ td {
 .radio-container input[type="radio"]:disabled + .radio-indicator,
 .radio-container input[type="radio"]:checked:disabled + .radio-indicator,
 .radio-container input[type="radio"]:disabled + .radio-indicator::before,
-.radio-container input[type="radio"]:checked:disabled + .radio-indicator::before,
-.radio-container input[type="radio"]:disabled + .radio-indicator::after,
-.radio-container input[type="radio"]:checked:disabled + .radio-indicator::after {
+.radio-container input[type="radio"]:checked:disabled + .radio-indicator::before {
   opacity: 0.1;
 }
 
@@ -1161,6 +1163,8 @@ td {
 }
 
 .project-item img {
+  width: 360px;
+  height: 576px;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-top: none;
@@ -1209,7 +1213,7 @@ td {
 .description-hover {
   display: none;
   position: absolute;
-  top: 376px;
+  bottom: 0px;
   margin-top: 8px;
   text-align: center;
   background-color: #eeeeee;
@@ -1219,7 +1223,6 @@ td {
 }
 
 .description-hover h3 {
-  color: #000000;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
@@ -1227,6 +1230,10 @@ td {
   margin-bottom: 15px;
   padding-right: 65px;
   padding-left: 60px;
+}
+
+.description-hover a {
+  color: #000000;
 }
 
 .description-hover .description-info {
@@ -1246,6 +1253,7 @@ td {
 }
 
 .description-hover .button {
+  color: #ffffff;
   width: 200px;
   margin-left: 20px;
   font-weight: 500;
@@ -1263,30 +1271,45 @@ td {
 
 .project-item:hover .description-hover {
   display: block;
+  position: absolute;
+  bottom: 7px;
+  margin-top: 8px;
+  text-align: center;
+  background-color: #eeeeee;
+  width: 360px;
+  padding-top: 25px;
+  padding-bottom: 45px;
 }
 
 .main-pages {
-  display: flex;
   width: 760px;
-  justify-content: flex-start;
   margin-bottom: 55px;
 }
 
 .pages {
+  display: flex;
+  width: 760px;
+  min-height: 50px;
+  margin: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
+.pages li {
+  display: flex;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  margin-right: 11px;
+}
+
 .pages a {
+  display: flex;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-}
-
-.pages li {
-  display: inline;
-  margin-right: 8px;
-  vertical-align: center;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .page-button {
@@ -1295,7 +1318,6 @@ td {
   background-color: #eeeeee;
   border-radius: 2px;
   line-height: 18px;
-  font-weight: 500;
 }
 
 .page-current {
@@ -1325,4 +1347,13 @@ td {
 .page-next {
   width: 260px;
   padding: 17px 77px 14px 77px;
+}
+
+.catalog-page .address-centerer {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+.catalog-page .footer-social-media {
+  margin-top: 55px;
 }
