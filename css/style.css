@@ -256,7 +256,7 @@ a {
 .main-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 81px;
+  margin-bottom: 84px;
 }
 
 .main-advantages {
@@ -341,7 +341,7 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   padding-bottom: 30px;
-  margin-bottom: 61px;
+
   padding-top: 26px;
 }
 
@@ -455,11 +455,13 @@ td {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
+  margin-top: 45px;
+  margin-bottom: 15px;
 }
 
 .main-contacts::before {
   position: absolute;
-  top: -45px;
+  top: -30px;
   left: 20px;
   content: "";
   width: 1160px;
@@ -469,7 +471,7 @@ td {
 
 .main-contacts::after {
   position: absolute;
-  top: 137px;
+  top: 153px;
   left: 20px;
   content: "";
   width: 1160px;
@@ -480,6 +482,7 @@ td {
 .contacts-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 1160px;
   flex-wrap: wrap;
   margin: 0;
@@ -501,6 +504,14 @@ td {
   height: 52px;
   background-color: #eeeeee;
   left: 278px;
+}
+
+.contact-item:first-of-type::before {
+  top: 5px;
+}
+
+.contact-item:nth-of-type(2)::before {
+  top: 15px;
 }
 
 .contact-item a {
@@ -572,7 +583,7 @@ td {
 
 .address p:last-of-type {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .address .button-width {
@@ -756,7 +767,7 @@ td {
 
 .be-friend {
   width: 760px;
-  padding-top: 7px;
+  padding-top: 4px;
 }
 
 .be-friend b {
@@ -1401,6 +1412,10 @@ td {
   margin-top: 68px;
 }
 
+.be-friend-catalog-page {
+  padding-top: 4px;
+}
+
 .be-friend-catalog-page p{
-  margin-top: 8px;
+  margin-top: 10px;
 }
