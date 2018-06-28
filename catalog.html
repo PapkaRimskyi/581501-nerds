@@ -123,7 +123,7 @@
           <div class="sort-container">
             <ul class="sort-by-class">
               <li class="sort-item">
-                <a href="#">По цене</a>
+                <a href="#" class="sort-item-active">По цене</a>
               </li>
               <li class="sort-item">
                 <a href="#">По типу</a>
@@ -134,7 +134,7 @@
             </ul>
             <ul class="sort-by-arrow">
               <li>
-                <a href="#" class="arrow-down">
+                <a href="#" class="arrow-down arrow-active">
                   <span class="visually-hidden">↓</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#231F20" d="M5.5 10L0 0h11"/>
@@ -286,7 +286,7 @@
       <section class="main-map">
         <img src="img/footer-img/map.jpg" alt="Карта. Как нас найти?" width="1600" height="462">
         <div class="address-centerer container">
-          <div class="address">
+          <div class="address address-catalog-page">
             <h3>Nёrds design studio</h3>
             <p>
               191186, Санкт-Петербург<br>
@@ -295,7 +295,7 @@
             <p>тел. <a name="communications" class="telephone">+7 (812) 275-75-75</a></p>
             <a class="button button-width open-popup" href="write-us.html">Напишите нам</a>
           </div>
-          <section class="modal modal-write-us">
+          <section class="modal modal-write-us container">
             <h2>Напишите нам</h2>
             <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="wrapper-row">
@@ -352,7 +352,7 @@
             </li>
           </ul>
         </div>
-        <div class="be-friend">
+        <div class="be-friend be-friend-catalog-page">
           <b>Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
@@ -378,7 +378,6 @@
 
       form.addEventListener("submit", function(evt) {
         evt.preventDefault();
-        console.log("Работает");
         console.log(login.value);
         console.log(email.value);
       });
