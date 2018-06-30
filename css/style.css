@@ -559,11 +559,13 @@ iframe {
 }
 
 .address {
+  position: relative;
   width: 319px;
   padding-top: 50px;
   padding-bottom: 47px;
   background-color: #ffffff;
   text-align: center;
+  z-index: 1;
 }
 
  .address h3 {
