@@ -524,9 +524,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .contact-item:not(:first-of-type)::before{
@@ -536,6 +533,8 @@ body {
   height: 52px;
   background-color: #eeeeee;
   left: -22px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 
