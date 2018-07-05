@@ -29,7 +29,14 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -534,7 +541,9 @@ body {
   background-color: #eeeeee;
   left: -22px;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 
@@ -567,7 +576,7 @@ body {
   height: 100%;
 }
 
-iframe {
+.iframe-map {
   display: block;
   position: absolute;
   width: 100%;
@@ -745,7 +754,6 @@ iframe {
   position: absolute;
   top: 90px;
   left: 850px;
-  font-size: 0;
   border: 0;
   width: 21px;
   height: 21px;
@@ -1097,6 +1105,11 @@ iframe {
   opacity: 1;
 }
 
+.radio-container input[type="radio"]:focus + .name-network::before,
+.radio-container input[type="radio"]:focus + .name-network::after {
+  opacity: 1;
+}
+
 .radio-container input[type="radio"]:disabled + .name-network::before,
 .radio-container input[type="radio"]:checked:disabled + .name-network::before,
 .radio-container input[type="radio"]:disabled + .name-network::after,
@@ -1166,6 +1179,10 @@ iframe {
 }
 
 .checkbox-container input[type="checkbox"]:hover + .name-hand::before {
+  opacity: 1;
+}
+
+.checkbox-container input[type="checkbox"]:focus + .name-hand::before {
   opacity: 1;
 }
 
@@ -1293,7 +1310,7 @@ iframe {
 }
 
  .arrow-down:hover path,
- .arrow-up path {
+ .arrow-up:hover path {
   fill: #a6a6a6;
   opacity: 1;
 }
@@ -1398,13 +1415,15 @@ iframe {
 .description-hover {
   display: none;
   position: absolute;
-  bottom: 7px;
+  bottom: 6px;
   margin-top: 8px;
   text-align: center;
   background-color: #eeeeee;
   width: 360px;
   padding-top: 25px;
   padding-bottom: 45px;
+  max-height: 506px;
+  overflow: auto;
 }
 
 .description-hover h3 {
@@ -1461,11 +1480,13 @@ iframe {
 .project-item:hover .description-hover {
   display: block;
   position: absolute;
-  bottom: 7px;
+  bottom: 6px;
   margin-top: 8px;
   text-align: center;
   background-color: #eeeeee;
   width: 360px;
+  max-height: 506px;
+  overflow: auto;
   padding-top: 25px;
   padding-bottom: 45px;
   -webkit-animation-name: smooth-appearance;
@@ -1520,7 +1541,6 @@ iframe {
 .page-current {
   padding: 13px 17px 12px 17px;
   border: 3px solid #dbdbdb;
-  background-color: #eeeeee;
   border-radius: 2px;
   background-color: #ffffff;
 }
@@ -1604,13 +1624,13 @@ iframe {
 }
 
 @-webkit-keyframes error-value {
-  0% 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
   10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-15px); transform: translateX(-15px); }
   20%, 40%, 60%, 80% { -webkit-transform: translateX(15px); transform: translateX(15px); }
 }
 
 @keyframes error-value {
-  0% 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
   10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-15px); transform: translateX(-15px); }
   20%, 40%, 60%, 80% { -webkit-transform: translateX(15px); transform: translateX(15px); }
 }
