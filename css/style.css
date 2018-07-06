@@ -216,7 +216,6 @@ body {
   padding: 71px 0 79px 0;
 }
 
-
 .slider-item:nth-child(1) {
   background: #eeeeee url("../img/header-img/slide1.png") no-repeat 93% 11px;
 }
@@ -533,7 +532,7 @@ body {
           justify-content: space-between;
 }
 
-.contact-item:not(:first-of-type)::before{
+.contact-item:not(:first-of-type)::before {
   position: absolute;
   content: "";
   width: 2px;
@@ -600,7 +599,7 @@ body {
   z-index: 1;
 }
 
- .address h3 {
+.address h3 {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -1213,7 +1212,6 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 .templates-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1303,20 +1301,20 @@ body {
   padding-right: 2px;
 }
 
- .arrow-down path,
- .arrow-up path {
+.arrow-down path,
+.arrow-up path {
   fill: #231F20;
   opacity: 0.2;
 }
 
- .arrow-down:hover path,
- .arrow-up:hover path {
+.arrow-down:hover path,
+.arrow-up:hover path {
   fill: #a6a6a6;
   opacity: 1;
 }
 
- .arrow-down:active path,
- .arrow-up:active path {
+.arrow-down:active path,
+.arrow-up:active path {
   fill: #231f20;
 }
 
@@ -1572,25 +1570,25 @@ body {
 }
 
 .address-catalog-page h3 {
- font-size: 18px;
- line-height: 30px;
- font-weight: 700;
- margin-top: 0;
- text-transform: uppercase;
- margin-bottom: 20px;
- padding-right: 50px;
- padding-left: 50px;
- text-align: left;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: left;
 }
 
 .address-catalog-page p {
- color: #666666;
- line-height: 18px;
- margin-bottom: 18px;
- padding-right: 50px;
- padding-left: 50px;
- text-align: left;
- word-wrap: break-word;
+  color: #666666;
+  line-height: 18px;
+  margin-bottom: 18px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: left;
+  word-wrap: break-word;
 }
 
 .address-catalog-page .button {
@@ -1605,7 +1603,7 @@ body {
   padding-top: 4px;
 }
 
-.be-friend-catalog-page p{
+.be-friend-catalog-page p {
   margin-top: 10px;
 }
 
